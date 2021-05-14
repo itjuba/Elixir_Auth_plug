@@ -37,6 +37,10 @@ defmodule SimpleAPI.Accounts do
   """
   def get_user!(id), do: Repo.get!(User, id)
 
+
+  def get_user_by(username), do: Repo.get_by!(User,username: username)
+
+
   @doc """
   Creates a user.
 
@@ -51,7 +55,7 @@ defmodule SimpleAPI.Accounts do
   """
   def create_user(attrs \\ %{}) do
     %User{}
-    |> User.changeset(attrs)
+    |> User.registration_changeset(attrs)
     |> Repo.insert()
   end
 

@@ -28,13 +28,15 @@ defmodule SimpleAPIWeb.Router do
 
    scope "/api", SimpleAPIWeb do
      pipe_through :api
-
+     post "/auth" , UserController, :auth
      resources "/users",UserController, only: [:create]
 
   end
   scope "/api", SimpleAPIWeb do
      pipe_through [:api, :api_protected ]
-     resources "/users",UserController, only: [:update, :delete, :show,:index]
+     get "/user_by" , UserController, :get_user_by
+     patch "/users",UserController, :update
+     resources "/users",UserController, only: [ :delete, :show,:index]
 
    end
 

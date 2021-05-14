@@ -46,8 +46,9 @@ defmodule SimpleAPI.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       {:poison, "~> 3.1"},
-      {:json, "~> 1.4"}
-    ]
+      {:json, "~> 1.4"},
+      {:comeonin, "~> 5.3"},
+      {:pbkdf2_elixir, "~> 1.4"}    ]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.

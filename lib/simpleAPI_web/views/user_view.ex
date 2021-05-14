@@ -21,7 +21,7 @@ defmodule SimpleAPIWeb.UserView do
       username: user.username,
       email: user.email,
       name: user.name,
-      password: user.password,
+#      password: user.password,
       address: user.address}
   end
 end
