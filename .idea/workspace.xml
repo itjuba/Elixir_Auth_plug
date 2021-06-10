@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f117ca3-3bb4-44d0-8a7f-131ac4bf76d6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/lib/simpleAPI/accounts.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/simpleAPI/accounts.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/simpleAPI/accounts/user.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/simpleAPI/accounts/user.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/simpleAPI_web/controllers/user_controller.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/simpleAPI_web/controllers/user_controller.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/simpleAPI_web/router.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/simpleAPI_web/router.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/simpleAPI_web/views/user_view.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/simpleAPI_web/views/user_view.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix.exs" beforeDir="false" afterPath="$PROJECT_DIR$/mix.exs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix.lock" beforeDir="false" afterPath="$PROJECT_DIR$/mix.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/priv/repo/migrations/20210512195913_create_users.exs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/auth_plug.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/auth_plug.ex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +42,22 @@
       <workItem from="1620939387553" duration="8993000" />
       <workItem from="1620978278844" duration="8498000" />
       <workItem from="1620999793626" duration="3899000" />
-      <workItem from="1621016936946" duration="4241000" />
+      <workItem from="1621016936946" duration="4928000" />
+      <workItem from="1621088193804" duration="50000" />
+      <workItem from="1621151033465" duration="1079000" />
+      <workItem from="1621237177240" duration="1642000" />
+      <workItem from="1621379473528" duration="172000" />
+      <workItem from="1622221919796" duration="784000" />
+      <workItem from="1622224435518" duration="154000" />
+      <workItem from="1622359627196" duration="919000" />
+      <workItem from="1622391385923" duration="654000" />
+      <workItem from="1622397998013" duration="731000" />
+      <workItem from="1622413644854" duration="1267000" />
+      <workItem from="1622579407777" duration="2518000" />
+      <workItem from="1622620448513" duration="152000" />
+      <workItem from="1622667323983" duration="1202000" />
+      <workItem from="1622893195271" duration="608000" />
+      <workItem from="1623343951019" duration="46000" />
     </task>
     <servers />
   </component>

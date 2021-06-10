@@ -7,27 +7,48 @@ defmodule SimpleAPIWeb.Auth_plug do
 
   def init(opts), do: opts
 
-    def authenticated?(conn) do
+    def authenticated(conn) do
       IO.puts "auth function"
       kk = fetch_access_token(conn)
       IO.inspect kk
 
       case fetch_access_token(conn) do
-        {:ok, token} -> verify?(token)
-        :error -> false
+        {:invalid} -> :invalid
+        {:expired} -> :expired
+         :error -> :error
+          {:ok,token} ->
+          token
+          case verify(token) do
+            true -> :valid
+            {:invalid} -> {:invalid}
+            {:expired} -> {:expired}
+          end
+
       end
     end
 
     def call(conn, _opts) do
-      if authenticated?(conn) do
+      case authenticated(conn) do
+      {:invalid} ->
         conn
-      else
-        conn
-
-        |> send_resp(401, "Not authorized !")
+        |> send_resp(401, "Not Authorized : Invalid JWT !")
         |> halt
-      end
+        {:expired} ->
+        conn
+         |> send_resp(401, "Not Authorized : Expired JWT !")
+         |> halt
+
+        :error ->
+        conn
+        |> send_resp(401, "Not Authorized !")
+        |> halt
+      conn
+        :valid ->
+        conn
     end
+
+  end
+
 
 
     def fetch_access_token(conn) do
@@ -38,16 +59,14 @@ defmodule SimpleAPIWeb.Auth_plug do
     end
 
 
-    def verify?(token) do
-      data = Phoenix.Token.verify(SimpleAPIWeb.Endpoint, "user auth", token, max_age: 86400)
+    def verify(token) do
+      data = Phoenix.Token.verify(SimpleAPIWeb.Endpoint, "user auth", token, max_age: 1)
       IO.inspect data
       case data do
         {:ok,_} -> true
-        {:error,:invalid} -> false
+        {:error,:invalid} -> {:invalid}
+        {:error, :expired} -> {:expired}
+#
       end
     end
-
-
-
-
   end
