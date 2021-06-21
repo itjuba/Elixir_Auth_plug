@@ -12,7 +12,7 @@ defmodule SimpleAPIWeb.UserView do
 
   def render("token.json", %{user: user, token: token}) do
 
-    JSON.encode!(%{token: token})
+    Jason.encode!(%{token: token})
 
   end
 

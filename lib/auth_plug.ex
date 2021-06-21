@@ -9,12 +9,9 @@ defmodule SimpleAPIWeb.Auth_plug do
 
     def authenticated(conn) do
       IO.puts "auth function"
-      kk = fetch_access_token(conn)
-      IO.inspect kk
+
 
       case fetch_access_token(conn) do
-        {:invalid} -> :invalid
-        {:expired} -> :expired
          :error -> :error
           {:ok,token} ->
           token
@@ -60,7 +57,7 @@ defmodule SimpleAPIWeb.Auth_plug do
 
 
     def verify(token) do
-      data = Phoenix.Token.verify(SimpleAPIWeb.Endpoint, "user auth", token, max_age: 1)
+      data = Phoenix.Token.verify(SimpleAPIWeb.Endpoint, "user auth", token, max_age: 86400)
       IO.inspect data
       case data do
         {:ok,_} -> true
