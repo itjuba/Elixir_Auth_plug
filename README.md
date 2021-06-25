@@ -1,5 +1,6 @@
 # SimpleAPI
 
+#Elixir JWT API authentification plug
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
