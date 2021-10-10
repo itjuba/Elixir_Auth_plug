@@ -3,7 +3,7 @@ use Mix.Config
 # Configure your database
 config :simpleAPI, SimpleAPI.Repo,
   username: "juba",
-  password: "Nadjib11051963",
+  password: "",
   database: "simpleapi_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
